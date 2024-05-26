@@ -10,6 +10,7 @@ class my_test extends uvm_test;
     `uvm_component_utils(my_test);
 
     // Instantiate Classes
+    my_env env;
 
     // Constructor
     function new (string name, uvm_component parent);
@@ -19,6 +20,7 @@ class my_test extends uvm_test;
     // Build Phase
     function void build_phase(uvm_phase phase);
         // Build env class here
+        env = my_env::type_id::create("env", this);
     endfunction
 
     // Connect Phase

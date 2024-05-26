@@ -10,6 +10,7 @@ class my_env extends uvm_env;
     `uvm_component_utils(my_env);
 
     // Instantiate Classes
+    my_agent agent;
 
     // Constructor
     function new(string name, uvn_component parent);
@@ -19,6 +20,7 @@ class my_env extends uvm_env;
     // Build Phase
     function void build_phase(uvm_phase phase);
         // Build agent class
+        agent = my_agent::type_id::create("agent", this);
     endfunction
 
     // Connect Phase

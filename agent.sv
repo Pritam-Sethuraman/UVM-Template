@@ -9,7 +9,10 @@ Author:         Pritam Sethuraman
 class my_agent extends uvm_agent;
     `uvm_component_utils(my_agent)
 
-    // Instantiate classes
+    // Instantiate Classes
+    my_sequencer sequencer;
+    my_monitor monitor;
+    my_driver driver;
 
     // Constructor
     function new(string name, uvm_component parent);
@@ -19,6 +22,9 @@ class my_agent extends uvm_agent;
     // Build Phase
     function void build_phase(uvm_phase phase);
         // Build sequencer, monitor and driver
+        sequencer = my_sequencer::type_id::create("sequencer", this);
+        monitor = my_monitor::type_id::create("monitor", this);
+        driver = my_driver::type_id::create("driver", this);
     endfunction
 
     // Connect Phase
