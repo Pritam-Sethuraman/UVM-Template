@@ -14,6 +14,8 @@ class my_test extends uvm_test;
         super.new(name, parent)
     endfunction
 
+    // Main Logic
+    
     // Methods
     // Properties
-endclass
+endclass: my_test
