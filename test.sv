@@ -9,12 +9,27 @@ Author:         Pritam Sethuraman
 class my_test extends uvm_test;
     `uvm_component_utils(my_test);
 
+    // Instantiate Classes
+
     // Constructor
     function new (string name, uvm_component parent);
         super.new(name, parent)
     endfunction
 
-    // Main Logic
+    // Build Phase
+    function void build_phase(uvm_phase phase);
+        // Build env class here
+    endfunction
+
+    // Connect Phase
+    function void connect_phase(uvm_phase phase);
+        // Necessary connections
+    endfunction
+
+    // Run Phase
+    task run_phase(uvm_phase phase);
+        // Main Logic goes here
+    endtask
     
     // Methods
     // Properties

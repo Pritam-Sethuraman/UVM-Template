@@ -15,6 +15,19 @@ class my_sequencer extends uvm_sequencer;
         super.new(name, parent);
     endfunction
 
-    // Main Logic
+    // Build Phase
+    function void build_phase(uvm_phase phase);
+        // Build other components
+    endfunction
+
+    // Connect Phase
+    function void connect_phase(uvm_phase phase);
+        // Necessary connections
+    endfunction
+
+    // Run Phase
+    task run_phase(uvm_phase phase);
+        // Main Logic goes here
+    endtask
     
 endclass: my_sequencer

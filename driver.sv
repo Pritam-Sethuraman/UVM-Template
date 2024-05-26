@@ -14,4 +14,19 @@ class my_driver extends uvm_driver;
         super.new(name, parent);
     endfunction
     
+    // Build Phase
+    function void build_phase(uvm_phase phase);
+        // Build other components
+    endfunction
+
+    // Connect Phase
+    function void connect_phase(uvm_phase phase);
+        // Necessary connections
+    endfunction
+
+    // Run Phase
+    task run_phase(uvm_phase phase);
+        // Main Logic goes here
+    endtask
+
 endclass: my_driver
